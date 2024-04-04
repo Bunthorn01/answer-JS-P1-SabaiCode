@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    document.write("Answer Homework");
+    document.write("<br><br><u>Answer1)</u>. ");
+    for (let i = 1; i <= 10; i++) {
+        document.writeln(i);
+    }
+
+    document.write("<br><br><u>Answer2)</u>. ");
+    for (let i = 10; i >= 1; i--) {
+        document.writeln(i);
+    }
+    
+    document.write("<br><br><u>Answer3)</u>. ");
+    function numericalToLetterGrade(grade) {
+        if (grade == 1) {
+          return "A";
+        } else if (grade == 2) {
+            return "B";
+        } else if (grade == 3) {
+            return "C";
+        } else if (grade == 4) {
+            return "D";
+        } else if (grade == 5) {
+            return "E";
+        } else {
+            return "F";
+        }
+    }
+    document.writeln(numericalToLetterGrade(1));
+    document.writeln(numericalToLetterGrade(2));
+    document.writeln(numericalToLetterGrade(3));
+    document.writeln(numericalToLetterGrade(4));
+    document.writeln(numericalToLetterGrade(5));
+    document.writeln(numericalToLetterGrade(6));
+
+    document.write("<br><br><u>Answer4)</u>. ");
+    let employees = ["Lara", "Evee", "Simi"]; // list mean array
+    let salaries = [1000, 2000, 120.90];
+    document.write("<br>");
+    for (let i = 0; i < employees.length; i++) {
+        document.writeln(employees[i] + " : " + salaries[i],"<br>");
+    }
+    
+    document.write("<br><br><u>Answer5)</u>. ");
+    for(let i=1; i<=10; i++) {
+        if(i%2 != 0) {
+            document.writeln(i);
+        }
+    }
+    
+    document.write("<br><br><u>Answer6)</u>. ");
+    function countOddEven(numbers) {
+        let oddCount = 0;
+        let evenCount = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        return { odd: oddCount, even: evenCount };
+    }
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const counts = countOddEven(numbers);
+    document.writeln("Number of odd ", counts.odd);
+    document.writeln("Number of even ", counts.even);
+    
+    document.write("<br><br><u>Answer7)</u>. ");
+    for (let i = 1; i <= 100; i++) {
+        document.write("<br>");
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.writeln("FizzBuzz");
+        } else if (i % 3 === 0) {
+            document.writeln("Fizz");
+        } else if (i % 5 === 0) {
+            document.writeln("Buzz");
+        } else {
+            document.writeln(i);
+        }
+    }
+    
+    document.write("<br><br><u>Answer8)</u>. ");
+    function sumArray(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    
+    const numbers1 = [1, 2, 3, 4, 5, 6];
+    const result = sumArray(numbers1);
+    document.writeln("Sum of array:", result);
+    
+    document.write("<br><br><u>Answer9)</u>. ");
+    function isPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function printPrimes(start, end) {
+        for (let i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                document.writeln(i);
+            }
+        }
+    }
+    const start = 1;
+    const end = 100;
+    document.writeln("Prime numbers between 1 and 100:");
+    printPrimes(start, end);
+
+    document.write("<br><br><u>Answer10)</u>. ");
+    function findLargestNumber(arr) {
+        if (arr.length === 0) {
+            return null; // Return null if the array is empty
+        }   
+        let max = arr[0]; // Assume the first element is the largest    
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]; // Update max if a larger number is found
+            }
+        }   
+        return max; // Return the largest number
+    }
+    const numbers2 = [3, 70, 2, 8, 5, 10];
+    const largestNumber = findLargestNumber(numbers2);
+    document.writeln("The largest number in the array is:", largestNumber);
+
+</script>
