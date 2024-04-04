@@ -105,28 +105,18 @@
     document.writeln("Sum of array:", result);
     
     document.write("<br><br><u>Answer9)</u>. ");
-    function isPrime(num) {
-        if (num <= 1) {
-            return false;
-        }
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) {
-                return false;
+    for (let i = 2; i <= 100; i++) {
+    let isPrime = true;
+    for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+            isPrime = false;
+            break;
             }
         }
-        return true;
-    }
-    function printPrimes(start, end) {
-        for (let i = start; i <= end; i++) {
-            if (isPrime(i)) {
-                document.writeln(i);
-            }
+        if (isPrime) {
+            document.writeln(i);
         }
     }
-    const start = 1;
-    const end = 100;
-    document.writeln("Prime numbers between 1 and 100:");
-    printPrimes(start, end);
 
     document.write("<br><br><u>Answer10)</u>. ");
     function findLargestNumber(arr) {
